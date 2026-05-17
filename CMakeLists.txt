@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(lab05)
+project(lab06)
 set(PRINT_VERSION_MAJOR 0)
 set(PRINT_VERSION_MINOR 1)
 set(PRINT_VERSION_PATCH 0)
