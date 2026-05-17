@@ -1,0 +1,11 @@
+Architecture: amd64
+Description: static C++ library for printing
+ Static C++ library for printing
+Maintainer: vekaplanov@bk.ru
+Package: libprint-dev
+Pre-Depends: cmake >= 3.0
+Priority: optional
+Section: devel
+Version: 0.1.0.0-1
+Installed-Size: 40
+
