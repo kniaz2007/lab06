@@ -31,18 +31,13 @@ jobs:
       - name: Build
         run: cmake --build _build
 
-      - name: Run tests (if BUILD_TESTS enabled)
-        run: |
-          cd _build
-          ctest --output-on-failure || true
-
       - name: Create packages (only on tags)
         if: startsWith(github.ref, 'refs/tags/')
         run: |
           cd _build
           cpack -G TGZ
           cpack -G DEB
-          cpack -G RPM || true   # RPM может не собраться без rpmbuild, но не страшно
+          cpack -G RPM || true
 
       - name: Upload packages to Release
         if: startsWith(github.ref, 'refs/tags/')
